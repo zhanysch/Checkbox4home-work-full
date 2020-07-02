@@ -11,7 +11,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MoviesActivity : AppCompatActivity() {
 
-    var BtM: Button? = null
+
+    var btback: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,13 +48,44 @@ class MoviesActivity : AppCompatActivity() {
             intent.putExtra("cb3 ", cb3)
 
 
+            // startActivity(intent)
+
+            startActivityForResult(intent, 1)
+        }
+
+    }
 
 
-            startActivity(intent)
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode==1 && resultCode == Activity.RESULT_OK){
+
+            val textButton = data?.getStringExtra("tvinf")
+
+            btback.text = textButton
+
+
+
+
+
+
+
+
+
+
         }
 
 
     }
 }
+
+
+
+
+
+
+
+
 
 

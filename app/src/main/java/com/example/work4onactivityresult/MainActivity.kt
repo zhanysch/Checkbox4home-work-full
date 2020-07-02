@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -19,17 +20,29 @@ class MainActivity : AppCompatActivity() {
         val  texttv5 = findViewById<TextView>(R.id.texttv5)
         val  texttv6 = findViewById<TextView>(R.id.texttv6)
 
-        val btn = findViewById<Button>(R.id.btnpage)
 
+
+        val btnpage = findViewById<Button>(R.id.btnpage)
+
+
+        btnpage.setOnClickListener {
+            val intent = Intent(this, MoviesActivity::class.java)
+
+            setResult(Activity.RESULT_OK,intent)
+            finish()
+
+
+
+        }
 
         val etData1 = intent.getStringExtra("tvinf")
-        val chBox1 =  intent.getBooleanExtra("cb1",false)
+        val chBox1 =  intent.getBooleanExtra("cb1",true)
 
         val etData2 = intent.getStringExtra("tv2")
-        val chBox2 =  intent.getBooleanExtra("cb2",false)
+        val chBox2 =  intent.getBooleanExtra("cb2",true)
 
         val etData3 = intent.getStringExtra("tv3")
-        val chBox3 =  intent.getBooleanExtra("cb3",false)
+        val chBox3 =  intent.getBooleanExtra("cb3",true)
 
         texttv1.text = etData1
 
@@ -61,7 +74,15 @@ class MainActivity : AppCompatActivity() {
         else { texttv6.text = "choised"
 
         }
-        
+
+
+
+
+
+
+
+
+
 
 
 
