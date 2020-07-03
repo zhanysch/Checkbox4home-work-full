@@ -28,8 +28,10 @@ class MainActivity : AppCompatActivity() {
         btnpage.setOnClickListener {
             val intent = Intent(this, MoviesActivity::class.java)
 
-            setResult(Activity.RESULT_OK,intent)
-            finish()
+
+            startActivityForResult(intent, 1)
+
+            
 
 
 

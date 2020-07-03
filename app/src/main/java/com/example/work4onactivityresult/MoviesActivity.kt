@@ -12,8 +12,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MoviesActivity : AppCompatActivity() {
 
 
-    var btback: Button? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
@@ -50,31 +48,30 @@ class MoviesActivity : AppCompatActivity() {
 
             // startActivity(intent)
 
-            startActivityForResult(intent, 1)
+            setResult(Activity.RESULT_OK,intent)
+            finish()
         }
 
     }
 
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
