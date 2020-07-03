@@ -6,81 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/texttv1"
-        android:layout_margin="40dp"
-        android:textSize="20dp"
-        android:textColorHighlight="@color/colorPrimaryDark"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
-       android:textColor="@color/colorAccent"
-        android:layout_height="wrap_content"/>
+
+
 
     <TextView
-        android:id="@+id/texttv2"
-        android:textColorHighlight="@color/colorPrimaryDark"
-        android:layout_margin="40dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp"
-
-        app:layout_constraintTop_toBottomOf="@+id/texttv1"/>
+    android:id="@+id/TV1"
+    android:layout_margin="40dp"
+    android:textSize="20dp"
+    android:textColorHighlight="@color/colorPrimaryDark"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:textColor="@color/colorAccent"
+    android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/texttv3"
+        android:id="@+id/TV2"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:layout_margin="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
         android:textSize="20dp"
-        app:layout_constraintTop_toBottomOf="@id/texttv2"/>
 
+        app:layout_constraintTop_toBottomOf="@+id/TV1"/>
 
     <TextView
-        android:id="@+id/texttv4"
+        android:id="@+id/TV3"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:layout_margin="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
         android:textSize="20dp"
-        app:layout_constraintTop_toBottomOf="@id/texttv3"/>
+        app:layout_constraintTop_toBottomOf="@+id/TV2"/>
+
 
     <TextView
-        android:id="@+id/texttv5"
+        android:id="@+id/TV4"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:layout_margin="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
         android:textSize="20dp"
-        app:layout_constraintTop_toBottomOf="@id/texttv4"/>
+        app:layout_constraintTop_toBottomOf="@id/TV3"/>
 
     <TextView
-        android:id="@+id/texttv6"
+        android:id="@+id/TV5"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:layout_margin="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
         android:textSize="20dp"
-        app:layout_constraintTop_toBottomOf="@id/texttv5"/>
+        app:layout_constraintTop_toBottomOf="@id/TV4"/>
+
+    <TextView
+        android:id="@+id/TV6"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:layout_margin="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/TV5"/>
 
 
 
 
     <Button
-        android:id="@+id/btnpage"
+        android:id="@+id/Btnpage"
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         android:hint="Next page"
-        app:layout_constraintTop_toBottomOf="@id/texttv6"/>
-
+        app:layout_constraintTop_toBottomOf="@id/TV6"/>
 
 
 
