@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
             startActivityForResult(intent, 1)
 
-            
+
 
 
 
@@ -76,8 +76,6 @@ class MainActivity : AppCompatActivity() {
         else { texttv6.text = "choised"
 
         }
-
-
 
 
 

@@ -16,13 +16,16 @@ class MoviesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
 
-        val textu = findViewById<TextView>(R.id.textu)
+
+
+
+        val textu = findViewById<TextView>(R.id.tv1)
         val chbt = findViewById<CheckBox>(R.id.chbt)
 
-        val textti = findViewById<TextView>(R.id.textti)
+        val textti = findViewById<TextView>(R.id.tv2)
         val chbLn = findViewById<CheckBox>(R.id.chbLn)
 
-        val texth = findViewById<TextView>(R.id.texth)
+        val texth = findViewById<TextView>(R.id.tv3)
         val chbbt = findViewById<CheckBox>(R.id.chbbt)
 
         val btback = findViewById<Button>(R.id.btback)
@@ -55,19 +58,6 @@ class MoviesActivity : AppCompatActivity() {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
