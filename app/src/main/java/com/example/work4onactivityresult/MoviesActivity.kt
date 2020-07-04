@@ -52,7 +52,7 @@ class MoviesActivity : AppCompatActivity() {
 
 
 
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent()
 
 
 

@@ -57,11 +57,21 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        if (requestCode== 1 && resultCode== Activity.RESULT_OK)
+        if (requestCode== 1 && resultCode== Activity.RESULT_OK) {
 
             val textButton = data?.getStringExtra("newButton")
 
             Btnpage?.text=text.Button
+
+
+        }   else {
+            log.d { "onActivityResult " , "  no data " }
+
+        }
+
+
+
+
 
 
 
