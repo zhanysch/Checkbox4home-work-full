@@ -8,63 +8,59 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_movies.*
 
 class MoviesActivity : AppCompatActivity() {
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
 
+        val btnSaveResult = findViewById<Button>(R.id.btnBack)
+        val cbMovie1 = findViewById<CheckBox>(R.id.cb1)
+        val cbMovie2 = findViewById<CheckBox>(R.id.cb2)
+        val cbMovie3 = findViewById<CheckBox>(R.id.cb3)
 
+        var TV1: String? = null
+        var TV2: String? = null
+        var TV3: String? = null
 
+        btnSaveResult.setOnClickListener {
 
-            val Texttv1 = findViewById<TextView>(R.id.Texttv1)
-            val chbox1= findViewById<CheckBox>(R.id.chbox1)
+            val intent = Intent()
 
-            val Texttv2= findViewById<TextView>(R.id.Texttv2)
-            val chbox2 = findViewById<CheckBox>(R.id.chbox2)
+            if (cb1.isChecked)
+            {TV1 = cb1.text.toString()}
+            else
+            {TV1 = "не готов"}
 
-            val Texttv3 = findViewById<TextView>(R.id.Texttv3)
-            val chbbt = findViewById<CheckBox>(R.id.chbbt)
+            if (cb2.isChecked)
+            {TV2 = cb2.text.toString()}
+            else
+            {TV2 = "не готов"}
 
-            val btback = findViewById<Button>(R.id.btback)
+            if (cb3.isChecked)
+            {TV3 = cb3.text.toString()}
+            else
+            {TV3 = "не готов"}
 
+            intent.putExtra("TV1", TV1)
+            intent.putExtra("TV2", TV2)
+            intent.putExtra("TV3", TV3)
 
-            btback.setOnClickListener {
-                val textFromTV1 = Texttv1.text.toString()
-
-                intent.putExtra("textFrom1", textFromTV1 )
-
-                val textFromTV2 = Texttv2.text.toString()
-                intent.putExtra("textFrom2",textFromTV2)
-
-                val textFromTV3 = Texttv3.text.toString()
-                intent.putExtra("TextFrom3",textFromTV3)
-
-                val cbinfo1 = chbox1.isChecked
-                val cbinfo2= chbox2.isChecked
-                val cbinfo3 = chbbt.isChecked
-
-                intent.putExtra("cbinfo1",cbinfo1)
-                intent.putExtra("cbinfo2",cbinfo2)
-                intent.putExtra("cbinfo3",cbinfo3)
-
-
-
-                val intent = Intent()
-
-
+            setResult(Activity.RESULT_OK, intent)
+            finish()
+        }
 
 
 
 
 
-                setResult(Activity.RESULT_OK,intent)
-                finish()
 
 
-            }
+
 
         }
 
